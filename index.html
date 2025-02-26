@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width: none;
+    }
+
+    body{
+        background-color: #f3f2ef;
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    nav{
+        width: 100vw;
+        height: 55px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 10p2;
+        z-index: 10;
+        margin-bottom: 0;
+    }
+
+    .right1 img{
+        width:55px;
+    }
+    .input-group{
+        width: 200px;
+        height: 40px;
+
+    }
+   
+    .boxes{
+        width:79px;
+        height: 55px;
+        border-bottom: 2px solid #0077B5;
+        cursor: pointer;
+        margin-right: 25px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        color: #0077B5;
+    }
+
+    .boxes p{
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .boxes i{
+        font-size: 20px;
+    }
+
+    .bx{
+        border: none;
+        color: rgba(128, 128, 128, 0.558);
+    }
+
+    .bx:hover{
+        border-bottom: 2px solid #0077B5;
+        font-weight: 400;
+        /* transition: 0.4s all ease; */
+        color: #0077B5;
+    }
+
+    .bx5
+    {
+        width: 100px;
+        border-right: 1px solid rgba(128, 128, 128, 0.403);
+        padding-right: 21px;
+        /* margin-right: 15px; */
+    }
+
+    .section2{
+        /* background-color: grey; */
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+        width: 100vw;
+    }
+    
+    .left2{
+        width: 19vw;
+        min-height: 100vh;
+        /* background-color: gray; */
+        margin:20px ;
+    }
+    .middle2{
+        width: 59vw;
+        min-height: 100vh;
+        /* background-color: gray; */
+        margin:20px ;
+    }
+    .right2{
+        width: 19vw;
+        min-height: 100vh;
+        /* background-color: gray; */
+        margin:20px ;
+    }
+
+    .left2-one{
+        background-color: white;
+        margin-bottom: 5px;
+
+    }
+    .l2img1{
+        width:100%;
+       
+        cursor: pointer;
+
+    }
+
+    .l2img2{
+        width: 80px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 45px;
+        left: 20px;
+        border: 1px solid white;
+    }
+
+    .l2info{
+        position: relative;
+        bottom: 45px;
+        margin-bottom: 0;
+    }
+    .l2info p {
+       
+        font-size: 12px;
+    }
+
+    .left2-two{
+        background-color: white;
+        font-size: 12px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .left2-twor1{
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .left2-twor2{
+        color: #0077B5;
+
+    }
+
+    .left2-twor1:hover{
+        text-decoration: underline;
+    }
+
+    .left2-twor3:hover{
+        text-decoration: underline;
+    }
+    
+    .left2-three{
+        background-color: white;
+        font-size: 12px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .left2-four{
+        background-color: white;
+        font-size: 13px;
+        padding: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+
+
+    .middle2-one{
+        width: 100%;
+        background-color: white;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    .middle2-one-sec1-r1{
+        width: 70px;
+        border-radius: 50%;
+    }
+    .m2-post{
+        width:600px
+    }
+    .xyz1 i{
+        color: #0077B5;
+    }
+    .xyz2 i{
+        color: #3f8201;
+    }
+    .xyz3 i{
+        color: rgb(185, 68, 14);
+    }
+
+    .xyz1{
+        padding:10px
+
+    }
+    .xyz2{
+        padding:10px
+    }
+    .xyz3{
+        padding:10px
+    }
+
+    .xyz1:hover {
+    background-color: rgba(128, 128, 128, 0.194);
+}
+    .xyz2:hover {
+    background-color: rgba(128, 128, 128, 0.194);
+}
+    .xyz3:hover {
+    background-color: rgba(128, 128, 128, 0.194);
+}
+
+.middle2-two{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+}
+
+.profilephoto2{
+    width:70px;
+    border-radius: 50%;
+}
+.abc{
+    font-size: 13px;
+}
+.ghj{
+    cursor: pointer; 
+}
+
+.middle2-two-sec2{
+    width:100%;
+}
+.hij{
+    width: 100%;
+}
+
+.right2-sec1{
+    width: 100%;
+    background-color: white;
+}
+.lmn{
+    font-size: 12px;
+}
+.ip{
+    padding: 8px;
+}
+.ip:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.219);
+
+}
+.hvr:hover{
+
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.219);
+}
+
+.right2-sec2{
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top:60px;
+}
+
+.right2-sec3{
+    width: 100%;
+    background-color: white;
+
+}
+
+@media(max-width:1200px)
+{
+    .right2{
+        display: none;
+    }
+    .inptg{
+        display: none;
+    }
+
+    .left2{
+        width: 28vw;
+    }
+    .middle2{
+        width: 68vw;
+    }
+}
+
+@media(max-width:900px)
+{
+    .right2{
+        display: none;
+    }
+
+    .left2{
+        display: none;
+    }
+    .middle2{
+        width: 96vw;
+    }
+}
+    
+</style>
+<body>
+    <!-- Section1 -->
+    <nav class="d-flex justify-content-center align-items-center">
+        <div class="right1 d-flex align-items-center justify-content-center mx-5" >
+            <img src="images/logo.jpg" >
+            <div class="input-group inptg">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+
+        <div class="left1 d-flex  align-items-center justify-content-center g-9 ">
+            <div class="boxes bx1 d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-house"></i>
+                <p class="m-0">Home</p>
+            </div>
+            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-user-group"></i>
+                <p class="m-0">My Network</p>
+            </div>
+            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-briefcase"></i>
+                <p class="m-0">Jobs</p>
+            </div>
+            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-message"></i>
+                <p class="m-0">Messaging</p>
+            </div>
+            <div class="boxes bx bx5 d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-bell"></i>
+                <p class="m-0">Notifications</p>
+            </div>
+            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-grip"></i>
+                <p class="m-0">For Bussiness</p>
+            </div>
+            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <p class="m-0">Premimum</p>
+            </div>
+            
+            
+            
+            
+        </div>
+    </nav>
+
+    <!-- Section2 -->
+    <div class="section2 d-flex justify-content-center ">
+        <div class="left2 ">
+            <div class=" left2-one rounded ">
+                <img src="images/banner.webp" class="l2img1 rounded">
+                <img src="images/profilephoto.webp" class="l2img2">
+                <div class="l2info ">
+                    <h1 class="fs-4 font-bold mx-3 ">Prem-Akash</h1>
+                    <p class="mx-3 m-2 font-bolder l2p2">Full Stack Web Developer </p>
+                      <p class="mx-3 m-0 text-secondary"> Secunderābād, Telangana</p>              
+                       <p class="mx-3 "><b> Sreenidhi Institute of Science and Technology</b></p>
+                </div>
+            </div>
+
+            <div class="left2-two rounded">
+                <div class="left2-twor1 d-flex justify-content-between align-items-center mx-3">
+                    <p>Profile viewer </p>
+                    <p class="left2-twor2">20</p>
+                </div>
+                <p class="left2-twor3 mx-3 align-items-center d-flex m-0">View all analytics</p>
+
+            </div>
+
+            <div class="left2-three rounded">
+                <p class="text-secondary mx-3 mb-1">Access exclusive tools & insights</p>
+                <p class="mx-4 m-0 left2-three-r4"> <i class="fa-solid fa-dollar-sign"></i> Try 1 month for ₹0</p>
+            </div>
+
+
+            <div class="left2-four rounded d-flex flex-column">
+                <div class="d-flex justify-content-start align-items-center m-1 mx-2">
+                    <i class="fa-solid fa-bookmark mx-3 "></i>
+                    <p class="m-0">Saved Items</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center m-1">
+                    <i class="fa-solid fa-user-group mx-3"></i>
+                    <p class="m-0">Groups</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center m-1">
+                    <i class="fa-solid fa-newspaper mx-3"></i>
+                    <p class="m-0">Newsletters</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center m-1">
+                    <i class="fa-solid fa-calendar-day mx-3"></i>
+                    <p class="m-0">Events</p>
+                </div>
+               
+
+            </div>
+        </div>
+
+
+        <!-- Section3 -->
+        <div class="middle2">
+            <div class="middle2-one d-flex flex-column  rounded">
+                
+                <div class="middle2-one-sec1  d-flex justify-content-start align-items-center m-0">
+                    <img src="images/profilephoto.webp" class="middle2-one-sec1-r1 m-3">
+                    <div class="input-group m2-post m-0  ">
+                        <input type="text" class="form-control rounded-pill border border-3" placeholder="Start a Post" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                    </div>
+
+                      <div class="middle2-one-sec2 d-flex  justify-content-around mt-0">
+                        <div class="d-flex justify-content-center align-items-center xyz1 rounded">
+                            <i class="fa-solid fa-image mx-2"></i>
+                            <p class="m-0">Photos</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center xyz2 rounded">
+                            <i class="fa-brands fa-youtube mx-2"></i>
+                            <p class="m-0">Videos</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center xyz3 rounded">
+                            <i class="fa-solid fa-newspaper mx-2"></i>
+                            <p class="m-0">Write article</p>
+                        </div>
+                      </div>            
+                    </div>
+            
+            <div class="middle2-two d-flex flex-column rounded">
+                <div class="d-flex  justify-content-between align-items-top">
+                <div class="middle2-two-sec1 d-flex justify-content-start align-items-center">
+                    <img src="images/profilephoto2.jpg" class="ghj profilephoto2">
+                    <div class="mx-3 d-flex flex-column justify-content-center align-items-top">
+                        <h6 class="m-0 ghj" >Tony Stark</h6>
+                        <p class="text-secondary m-0 abc">Full Stack Web Developer | Team Leader | Communication Skills</p>
+                        <p class="text-secondary m-0 abc">1d.</p>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-between align-items-top ghj">
+                        <i class="fa-solid fa-ellipsis mx-1"></i>
+                        <i class="fa-solid fa-xmark mx-2 "></i>
+                    </div>
+                </div>
+                <div class="middle2-two-sec2 m-0 d-flex flex-column justify-content-start align-items-center">
+                    <p>Just finished the course “Career Essentials in Software Development by Microsoft and LinkedIn”! Check it out: https://lnkd.in/etDDPUBY</p>
+                    <img src="images/linkedincertificate.png" width="100%">
+                </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2 border-bottom border-1 border-dark p-3">
+                        <div class="d-flex">
+                            <img src="images/appreciate.svg" width="30px">
+                            <p class="text-secondary m-0 mx-1">Prem and 600 others</p>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center ">
+                            <p class="text-secondary m-0">12 Comments</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mt-2" >
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-thumbs-up mx-2"></i>
+                            <p class="m-0">Like</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-comment-dots mx-2"></i>
+                            <p class="m-0">comments</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-repeat mx-2"></i>
+                            <p class="m-0">Repost</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-paper-plane mx-2"></i>
+                            <p class="m-0">Share</p>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <div class="middle2-two d-flex flex-column rounded mt-3">
+                <div class="d-flex  justify-content-between align-items-top">
+                <div class="middle2-two-sec1 d-flex justify-content-start align-items-center">
+                    <img src="images/profilephoto2.jpg" class="ghj profilephoto2">
+                    <div class="mx-3 d-flex flex-column justify-content-center align-items-top">
+                        <h6 class="m-0 ghj" >Tony Stark</h6>
+                        <p class="text-secondary m-0 abc">Full Stack Web Developer | Team Leader | Communication Skills</p>
+                        <p class="text-secondary m-0 abc">1d.</p>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-between align-items-top ghj">
+                        <i class="fa-solid fa-ellipsis mx-1"></i>
+                        <i class="fa-solid fa-xmark mx-2 "></i>
+                    </div>
+                </div>
+                <div class="middle2-two-sec2 m-0 d-flex flex-column justify-content-start align-items-center">
+                    <p>Just finished the course “Career Essentials in Software Development by Microsoft and LinkedIn”! Check it out: https://lnkd.in/etDDPUBY</p>
+                    <img src="images/linkedincertificate.png" width="100%">
+                </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2 border-bottom border-1 border-dark p-3">
+                        <div class="d-flex">
+                            <img src="images/appreciate.svg" width="30px">
+                            <p class="text-secondary m-0 mx-1">Prem and 600 others</p>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center ">
+                            <p class="text-secondary m-0">12 Comments</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mt-2" >
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-thumbs-up mx-2"></i>
+                            <p class="m-0">Like</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-comment-dots mx-2"></i>
+                            <p class="m-0">comments</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-repeat mx-2"></i>
+                            <p class="m-0">Repost</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-paper-plane mx-2"></i>
+                            <p class="m-0">Share</p>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <div class="middle2-two d-flex flex-column rounded mt-3">
+                <div class="d-flex  justify-content-between align-items-top">
+                <div class="middle2-two-sec1 d-flex justify-content-start align-items-center">
+                    <img src="images/profilephoto2.jpg" class="ghj profilephoto2">
+                    <div class="mx-3 d-flex flex-column justify-content-center align-items-top">
+                        <h6 class="m-0 ghj" >Tony Stark</h6>
+                        <p class="text-secondary m-0 abc">Full Stack Web Developer | Team Leader | Communication Skills</p>
+                        <p class="text-secondary m-0 abc">1d.</p>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-between align-items-top ghj">
+                        <i class="fa-solid fa-ellipsis mx-1"></i>
+                        <i class="fa-solid fa-xmark mx-2 "></i>
+                    </div>
+                </div>
+                <div class="middle2-two-sec2 m-0 d-flex flex-column justify-content-start align-items-center">
+                    <p>Just finished the course “Career Essentials in Software Development by Microsoft and LinkedIn”! Check it out: https://lnkd.in/etDDPUBY</p>
+                    <img src="images/linkedincertificate.png" width="100%">
+                </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2 border-bottom border-1 border-dark p-3">
+                        <div class="d-flex">
+                            <img src="images/appreciate.svg" width="30px">
+                            <p class="text-secondary m-0 mx-1">Prem and 600 others</p>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center ">
+                            <p class="text-secondary m-0">12 Comments</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mt-2" >
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-thumbs-up mx-2"></i>
+                            <p class="m-0">Like</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-comment-dots mx-2"></i>
+                            <p class="m-0">comments</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-repeat mx-2"></i>
+                            <p class="m-0">Repost</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-paper-plane mx-2"></i>
+                            <p class="m-0">Share</p>
+                        </div>
+                    </div>
+                
+            </div>
+            <div class="middle2-two d-flex flex-column rounded mt-3">
+                <div class="d-flex  justify-content-between align-items-top">
+                <div class="middle2-two-sec1 d-flex justify-content-start align-items-center">
+                    <img src="images/profilephoto2.jpg" class="ghj profilephoto2">
+                    <div class="mx-3 d-flex flex-column justify-content-center align-items-top">
+                        <h6 class="m-0 ghj" >Tony Stark</h6>
+                        <p class="text-secondary m-0 abc">Full Stack Web Developer | Team Leader | Communication Skills</p>
+                        <p class="text-secondary m-0 abc">1d.</p>
+                    </div>
+                </div>
+                    <div class="d-flex justify-content-between align-items-top ghj">
+                        <i class="fa-solid fa-ellipsis mx-1"></i>
+                        <i class="fa-solid fa-xmark mx-2 "></i>
+                    </div>
+                </div>
+                <div class="middle2-two-sec2 m-0 d-flex flex-column justify-content-start align-items-center">
+                    <p>Just finished the course “Career Essentials in Software Development by Microsoft and LinkedIn”! Check it out: https://lnkd.in/etDDPUBY</p>
+                    <img src="images/linkedincertificate.png" width="100%">
+                </div>
+                    <div class="d-flex align-items-center justify-content-between mt-2 border-bottom border-1 border-dark p-3">
+                        <div class="d-flex">
+                            <img src="images/appreciate.svg" width="30px">
+                            <p class="text-secondary m-0 mx-1">Prem and 600 others</p>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center ">
+                            <p class="text-secondary m-0">12 Comments</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mt-2" >
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-thumbs-up mx-2"></i>
+                            <p class="m-0">Like</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-comment-dots mx-2"></i>
+                            <p class="m-0">comments</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-repeat mx-2"></i>
+                            <p class="m-0">Repost</p>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center ghj ">
+                            <i class="fa-solid fa-paper-plane mx-2"></i>
+                            <p class="m-0">Share</p>
+                        </div>
+                    </div>
+                
+            </div>
+
+
+
+        </div>
+        <div class="right2">
+
+            <div class="right2-sec1 d-flex flex-column justify-content-start p-2 rounded">
+                <div class="d-flex flex-column  mt-2">
+                    <h4 class="m-0">Trending News</h4>
+                    <p class="text-secondary m-1 ">Top Stories </p>
+                </div>
+                <div class="d-flex flex-column mt-2 ip">
+                    <h6 class="m-0">Large layoffs hit Starbucks</h6>
+                    <p class="text-secondary m-1 lmn">13m ago . 49,025 readers</p>
+                </div>
+                <div class="d-flex flex-column mt-2 ip">
+                    <h6 class="m-0">High-profit GCCs on the rise
+                        </h6>
+                    <p class="text-secondary m-1 lmn">2h ago . 5,925 readers</p>
+                </div>
+                <div class="d-flex flex-column mt-2 ip">
+                    <h6 class="m-0">VC firms eye agentic AI startups
+                        </h6>
+                    <p class="text-secondary m-1 lmn">6h ago . 1,025 readers </p>
+                </div>
+
+                <h6>Show More</h6>
+                <p class="text-secondary ">Today Puzzles </p>
+
+                <div class="d-flex flex-column gap-3">
+                    <div class="puzzle d-flex justify-content-between align-items-center  p-2 hvr">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/puzzle.svg" height="35px" alt="">
+                            <div class="d-flex flex-column justify-content-start ">
+                                <h6 class="m-0">
+                                    Tango
+                                </h6>
+                                <p class="text-secondary m-1 lmn">
+                                   Harmonize the grid
+                                </p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="puzzle d-flex justify-content-between align-items-center  p-2 hvr">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/puzzle2.svg" height="35px" alt="">
+                            <div class="d-flex flex-column justify-content-start">
+                                <h6 class="m-0">
+                                    Queens
+                                </h6>
+                                <p class="text-secondary m-1 lmn">
+                                    Crown each region
+                                </p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="puzzle d-flex justify-content-between align-items-center p-2  hvr">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/puzzle3.svg" height="32px" alt="">
+                            <div class="d-flex flex-column justify-content-start">
+                                 <h6 class="m-0">
+                                    Pinpoint
+                                </h6>
+                                <p class="text-secondary m-1 lmn">
+                                    Guess the category
+                                </p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="puzzle d-flex justify-content-between align-items-center p-2 hvr">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/puzzle4.svg" height="35px" alt="">
+                            <div class="d-flex flex-column justify-content-start">
+                                 <h6 class="m-0">
+                                    Crossclimb
+                                </h6>
+                                <p class="text-secondary m-1 lmn">
+                                    Unlock a trivia ladder
+                                </p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            <div class=" right2-sec2 mt-3   rounded  d-flex flex-column justify-content-around align-items-center p-4">
+                <p class="text-secondary  m-0">Prem unlock your full potential with linkedin premium</p>
+                <img src="./images/profilephoto.webp" class="rounded-circle m-0" alt="profile_picture" width="80px">
+                <h6 class="text-secondary fw-bold">See who is viewed your profile in last 365 days</h6>
+                <button class="btn btn-outline-primary fw-bold">Try for free</button>
+            </div>
+
+            <div class="right2-sec3 mt-3 rounded d-flex p-3 justify-content-around">
+                
+                    <div class="text-danger bg-danger-subtle border border-danger rounded-3 p-2">TIP</div>
+                    <h6 class="text-secondary mx-2">Try LinkedIn on Windows App</h6>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid text-center bg-body-secondary">
+            <p>© SNIST FS&AA | ALL RIGHTS RESERVED</p>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -18,13 +18,13 @@
 
     body{
         background-color: #f3f2ef;
-        min-height: 100vh;
-        width: 100vw;
+        /* min-height: 100vh; */
+        /* width: 100vw; */
     }
 
     nav{
-        width: 100vw;
-        height: 55px;
+        width: 100%;
+        /* height: 55px; */
         background-color: white;
         position: sticky;
         top: 0;
@@ -93,19 +93,19 @@
     
     .left2{
         width: 19vw;
-        min-height: 100vh;
+        /* min-height: 100vh; */
         /* background-color: gray; */
         margin:20px ;
     }
     .middle2{
         width: 59vw;
-        min-height: 100vh;
+        /* min-height: 100vh; */
         /* background-color: gray; */
         margin:20px ;
     }
     .right2{
         width: 19vw;
-        min-height: 100vh;
+        /* min-height: 100vh; */
         /* background-color: gray; */
         margin:20px ;
     }
@@ -221,12 +221,15 @@
 
     .xyz1:hover {
     background-color: rgba(128, 128, 128, 0.194);
+    cursor: pointer;
 }
     .xyz2:hover {
     background-color: rgba(128, 128, 128, 0.194);
+    cursor: pointer;
 }
     .xyz3:hover {
     background-color: rgba(128, 128, 128, 0.194);
+    cursor: pointer;
 }
 
 .middle2-two{
@@ -275,10 +278,15 @@
 }
 
 .right2-sec2{
-    width: 100%;
     background-color: white;
+}
+
+
+.rtop{
+    width: 100%;
+    background-color:transparent;
     position: sticky;
-    top:60px;
+    top:50px;
 }
 
 .right2-sec3{
@@ -289,32 +297,70 @@
 
 @media(max-width:1200px)
 {
+    .right1{
+        display: none;
+    }
+
     .right2{
         display: none;
     }
+
+
     .inptg{
         display: none;
     }
 
-    .left2{
-        width: 28vw;
-    }
-    .middle2{
-        width: 68vw;
-    }
 }
 
 @media(max-width:900px)
 {
+    .section2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav{
+        width: 100vw;
+        font-size: 13px;
+    }
+
+   
+    
     .right2{
         display: none;
     }
 
+    .left2-two, .left2-four, .left2-three{
+        display: none !important;
+    }
+
     .left2{
-        display: none;
+        width: 96vw;
+        /* display: none; */
     }
     .middle2{
         width: 96vw;
+    }
+
+}
+
+@media(max-width:500px)
+{
+
+    .nav{
+        width: 100vw !important;
+        display: flex !important;
+        justify-content: space-around !important;
+        align-items: center !important;
+    }
+    .right1{
+        display: none !important;
+    }
+
+    .bx6 , .bx7{
+        display: none  !important;
     }
 }
     
@@ -322,7 +368,7 @@
 <body>
     <!-- Section1 -->
     <nav class="d-flex justify-content-center align-items-center">
-        <div class="right1 d-flex align-items-center justify-content-center mx-5" >
+        <div class="right1 d-flex align-items-center justify-content-center" >
             <img src="images/logo.jpg" >
             <div class="input-group inptg">
                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -351,19 +397,17 @@
                 <i class="fa-solid fa-bell"></i>
                 <p class="m-0">Notifications</p>
             </div>
-            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+            <div class="boxes bx bx6 d-flex flex-column align-items-center justify-content-center">
                 <i class="fa-solid fa-grip"></i>
                 <p class="m-0">For Bussiness</p>
             </div>
-            <div class="boxes bx d-flex flex-column align-items-center justify-content-center">
+            <div class="boxes bx bx7 d-flex flex-column align-items-center justify-content-center">
                 <i class="fa-solid fa-dollar-sign"></i>
                 <p class="m-0">Premimum</p>
             </div>
             
-            
-            
-            
         </div>
+
     </nav>
 
     <!-- Section2 -->
@@ -395,7 +439,7 @@
             </div>
 
 
-            <div class="left2-four rounded d-flex flex-column">
+            <div class="left2-four rounded d-flex flex-column iop">
                 <div class="d-flex justify-content-start align-items-center m-1 mx-2">
                     <i class="fa-solid fa-bookmark mx-3 "></i>
                     <p class="m-0">Saved Items</p>
@@ -734,7 +778,8 @@
                 
             </div>
 
-            <div class=" right2-sec2 mt-3   rounded  d-flex flex-column justify-content-around align-items-center p-4">
+            <div class="rtop d-flex flex-column rounded ">
+            <div class=" right2-sec2 mt-3   rounded  d-flex flex-column justify-content-around align-items-center  p-4">
                 <p class="text-secondary  m-0">Prem unlock your full potential with linkedin premium</p>
                 <img src="./images/profilephoto.webp" class="rounded-circle m-0" alt="profile_picture" width="80px">
                 <h6 class="text-secondary fw-bold">See who is viewed your profile in last 365 days</h6>
@@ -745,9 +790,8 @@
                 
                     <div class="text-danger bg-danger-subtle border border-danger rounded-3 p-2">TIP</div>
                     <h6 class="text-secondary mx-2">Try LinkedIn on Windows App</h6>
-                
             </div>
-
+        </div>
         </div>
     </div>
 
@@ -757,15 +801,6 @@
 
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
